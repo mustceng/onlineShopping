@@ -9,7 +9,7 @@ For building and running the application you need:
 - [Maven 3](https://maven.apache.org)
 - [PostgreSQL](https://www.postgresql.org/)
 
-## Application.yml and applciaiton.properties
+## Application.yml and application.properties
 To create the tables in the database, first set ddl-auto=create and run the application.
 Then if you want you can set ddl-auto=none and continue working.
 You can use profiles for database schema and data .
