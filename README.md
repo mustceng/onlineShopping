@@ -24,7 +24,7 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 mvn spring-boot:run
 ```
 
-## Multi Database Connections with Spring Boot
+## Connecting Multiple Databases in Spring Boot
 Config files are; DataSource1Config and DataSource2Config 
 
 ## Postman Test
