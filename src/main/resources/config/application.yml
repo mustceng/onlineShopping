@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+#  datasource:
+#    db1:
+#      url: jdbc:postgresql://localhost:5432/testdb
+#      username: testuser
+#      password: 12345678
+#      driver-class-name: org.postgresql.Driver
+#      type: com.zaxxer.hikari.HikariDataSource
+#
+#    db2:
+#      url: jdbc:postgresql://localhost:5432/testdb2
+#      username: testuser
+#      password: 12345678
+#      driver-class-name: org.postgresql.Driver
+#      type: com.zaxxer.hikari.HikariDataSource
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+#      ddl-auto: none
+
+
+
+#  profiles:
+##    include: onlineshop,flyway
+    include: onlineShop
+#    include: onlineshop,generate-ddl
+
+
+

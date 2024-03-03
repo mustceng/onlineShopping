@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "7bc3f738-8cd1-443d-ad4e-c45e3b1c6c38",
+		"name": "online-shop-postman-collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category-save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"CD\",\n    \"vat\":5,\n    \"categoryCode\":\"CD_DVD\",\n    \"parentCategory\":null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/category/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Deep Blue\",\n\t\"brand\":\"Hollywood Entertainment\",\n\t\"imageUrl\":\"www.image.com/1\",\n\t\"price\":13.0,\n\t\"rating\":10,\n\t\"category\":{\n        \"id\":45\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order-save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":1,\n    \"address\":\"32. street Üsküdar/İstanbul\",\n    \"cancelOrder\":false,\n    \"orderDetails\":[\n        {\n            \"amount\":2,\n            \"productId\":50\n        },\n        {\n            \"amount\":2,\n            \"productId\":52\n        }\n    ]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order-update-address",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/update-address/14?newAddress=Yenimahalle 10. sokak No:1 Üsküdar/İstanbul",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"update-address",
+						"14"
+					],
+					"query": [
+						{
+							"key": "newAddress",
+							"value": "Yenimahalle 10. sokak No:1 Üsküdar/İstanbul"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order-cancel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/cancel/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"cancel",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
